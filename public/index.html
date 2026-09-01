@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RQX — Ask less. Accomplish more.</title>
+  <link rel="stylesheet" href="/widget.css" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f1115;
+      color: #f4f4f8;
+    }
+    header {
+      padding: 96px 24px 64px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 48px;
+      margin: 0 0 12px;
+      background: linear-gradient(90deg, #6c5ce7, #22c55e, #f97316);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    header p {
+      font-size: 18px;
+      color: #a0a0b8;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px 96px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #171923;
+      border: 1px solid #23263a;
+      border-radius: 16px;
+      padding: 24px;
+    }
+    .card .tier {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 8px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+    .swift { background: #22c55e; color: #06210f; }
+    .prime { background: #6c5ce7; color: #fff; }
+    .forge { background: #f97316; color: #2a1200; }
+    .card h2 { margin: 0 0 8px; font-size: 20px; }
+    .card p { margin: 0; color: #a0a0b8; font-size: 14px; line-height: 1.5; }
+    footer {
+      text-align: center;
+      padding: 32px;
+      color: #6b6b80;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RQX</h1>
+    <p>Tell RQX what you want accomplished — not which model or tool to use. It routes the request to the right tier automatically. Click the bubble in the corner to try it.</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <span class="tier swift">Swift</span>
+      <h2>Fast, everyday requests</h2>
+      <p>Quick questions, rewrites, translations, summaries, short emails. Optimized for speed.</p>
+    </div>
+    <div class="card">
+      <span class="tier prime">Prime</span>
+      <h2>Deep reasoning</h2>
+      <p>Research, business analysis, planning, and multi-step problems that need a thorough answer.</p>
+    </div>
+    <div class="card">
+      <span class="tier forge">Forge</span>
+      <h2>Engineering</h2>
+      <p>Code, debugging, architecture, and technical or DevOps work with working code and explanations.</p>
+    </div>
+  </main>
+
+  <footer>RQX — an AI-powered automation bot by RENQUANTIS X</footer>
+
+  <script>
+    // Same-origin demo: leave apiBase empty. On another site, point it at
+    // wherever this backend is deployed, e.g. "https://api.yoursite.com".
+    window.RQX_CONFIG = { apiBase: "" };
+  </script>
+  <script src="/widget.js"></script>
+</body>
+</html>

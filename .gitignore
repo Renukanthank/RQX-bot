@@ -1,3 +1,10 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# RQX runtime data (per-session chat history/memory)
+/data/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
