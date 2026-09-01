@@ -1,0 +1,195 @@
+#rqx-widget-root {
+  --rqx-bg: #0f1115;
+  --rqx-accent: #6c5ce7;
+  --rqx-swift: #22c55e;
+  --rqx-prime: #6c5ce7;
+  --rqx-forge: #f97316;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.rqx-bubble {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--rqx-accent);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  z-index: 999998;
+}
+
+.rqx-panel {
+  position: fixed;
+  right: 24px;
+  bottom: 92px;
+  width: 360px;
+  max-width: calc(100vw - 32px);
+  height: 480px;
+  max-height: calc(100vh - 140px);
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 999999;
+}
+
+.rqx-header {
+  background: var(--rqx-bg);
+  color: #fff;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rqx-title {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.rqx-title strong {
+  font-size: 15px;
+}
+
+.rqx-title span {
+  font-size: 11px;
+  opacity: 0.65;
+}
+
+.rqx-close {
+  background: none;
+  border: none;
+  color: #fff;
+  opacity: 0.7;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.rqx-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #f7f7fb;
+}
+
+.rqx-msg {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+  gap: 4px;
+}
+
+.rqx-msg-user {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.rqx-msg-assistant {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.rqx-bubble-text {
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 13.5px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.rqx-msg-user .rqx-bubble-text {
+  background: var(--rqx-accent);
+  color: #fff;
+  border-bottom-right-radius: 2px;
+}
+
+.rqx-msg-assistant .rqx-bubble-text {
+  background: #fff;
+  color: #1a1a1a;
+  border: 1px solid #e5e5ef;
+  border-bottom-left-radius: 2px;
+}
+
+.rqx-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.rqx-badge-swift {
+  background: var(--rqx-swift);
+}
+
+.rqx-badge-prime {
+  background: var(--rqx-prime);
+}
+
+.rqx-badge-forge {
+  background: var(--rqx-forge);
+}
+
+.rqx-form {
+  display: flex;
+  border-top: 1px solid #eee;
+  padding: 8px;
+  gap: 8px;
+  background: #fff;
+}
+
+.rqx-input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13.5px;
+  outline: none;
+}
+
+.rqx-input:focus {
+  border-color: var(--rqx-accent);
+}
+
+.rqx-send {
+  background: var(--rqx-accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.rqx-send:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+@media (max-width: 480px) {
+  .rqx-panel {
+    right: 16px;
+    left: 16px;
+    width: auto;
+  }
+  .rqx-bubble {
+    right: 16px;
+    bottom: 16px;
+  }
+}
