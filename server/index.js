@@ -20,7 +20,14 @@ const allowedOrigins = (process.env.ALLOWED_ORIGINS || "*")
   .map((o) => o.trim());
 
 const anthropic = process.env.ANTHROPIC_API_KEY
-  ? new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
+  ? new Anthropic({
+      apiKey: process.env.ANTHROPIC_API_KEY,
+      // Identity-linked personal API keys require this header; workspace API
+      // keys ignore it. Safe to leave unset for the latter.
+      defaultHeaders: process.env.ANTHROPIC_WORKSPACE_ID
+        ? { "anthropic-workspace-id": process.env.ANTHROPIC_WORKSPACE_ID }
+        : undefined,
+    })
   : null;
 
 app.use(
