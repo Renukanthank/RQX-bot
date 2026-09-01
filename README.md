@@ -32,6 +32,24 @@ Routing is a keyword/length heuristic in [`server/router.js`](server/router.js) 
 words → Forge, research/analysis words or long messages → Prime, else → Swift). Callers
 can also force a tier by sending `{ tier: "swift" | "prime" | "forge" }` instead of `"auto"`.
 
+## Deploy (get a shareable link)
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Renukanthank/RQX-bot)
+
+1. Click the button above and sign in / connect your GitHub account.
+2. Render reads [`render.yaml`](render.yaml) and proposes a free web service — accept it.
+3. When prompted for environment variables, paste in `ANTHROPIC_API_KEY` (and
+   `ANTHROPIC_WORKSPACE_ID` if your key is an identity-linked personal key — see
+   [How it's routed today](#how-its-routed-today)). Your key goes straight into Render's
+   dashboard, not through anyone else.
+4. Click **Deploy**. In a minute or two you'll get a public URL like
+   `https://rqx-bot.onrender.com` — that's your shareable link, and it's also where the
+   demo landing page with the live widget lives.
+
+Note: the free plan spins down after 15 minutes of inactivity, so the first request after
+a quiet period takes a few extra seconds to wake up. Upgrade the plan in Render's
+dashboard if you need it always warm.
+
 ## Quickstart
 
 ```bash

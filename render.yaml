@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: rqx-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: ANTHROPIC_WORKSPACE_ID
+        sync: false
+      - key: ALLOWED_ORIGINS
+        value: "*"
+      - key: RQX_SWIFT_MODEL
+        value: claude-haiku-4-5-20251001
+      - key: RQX_PRIME_MODEL
+        value: claude-sonnet-5
+      - key: RQX_FORGE_MODEL
+        value: claude-sonnet-5
